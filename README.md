@@ -7,14 +7,35 @@
     -   Format on Save
 -   Prettier
 
-## Remove existing origin
+## Optional
+
+### Remove connection to a remote repository
 
 ```bash
+# Manage connections with other repositories
 $ git remote
 
-$ git remote show name_of_origin
+# Display detailed output on the configuration of a remote
+$ git remote show <name>
 
-$ git remote rm name_of_origin
+# Remove the connection to the remote repository
+$ git remote rm <name>
+```
+
+### Re-initialize repository
+
+```bash
+# Delete all git information
+rm -rf .git
+
+# Recreate an empty repo
+git init
+
+# Re-add all the files to the index
+git add --all
+
+# Capture a snapshot of the project's currently staged changes
+git commit -m 'initial commit'
 ```
 
 ## References
